@@ -1,59 +1,100 @@
 # Final-Project-CST205
+# Eric Rubio Salazar
+# CST205
+# Dec 18, 2024
+# https://trello.com/b/RuNkjWup
+# 
+
+
 Final Project for CST205 Digital ScrapBook Creator 
-Week 1: Project Planning and Initial Setup
-Goal: Plan the core functionality of the Digital Scrapbook Creator and set up the development environment.
-Research:
-Decided on using Python and Tkinter for the GUI development.
-Chose Pillow for image manipulation and handling.
-Identified features like adding images, text, and saving projects as JSON.
-Initial Setup:
-Installed necessary libraries (tkinter, Pillow).
-Created project structure, including separate files for the GUI (scrapbook_gui.py), scrapbook logic (scrapbook.py), and asset files (backgrounds, icons).
-Set up basic UI elements: window title, buttons, and placeholders for scrapbook content.
 
-Week 2: Basic Functionality Implementation
-Goal: Implement basic features like adding pages, adding text, and saving/loading scrapbook data.
-Implemented Features:
-Created the Scrapbook class, allowing users to add pages and elements (text and images) to each page.
-Built Add Page functionality to add a new page to the scrapbook.
-Implemented the Add Text functionality with a simple text field for users to input and add text.
-Used file dialogs to allow users to upload images and save projects as Python files.
-Challenges:
-Figuring out how to store and retrieve elements (text and images) for each page.
-Handling image resizing and displaying multiple images on a page without overlaps.
-Outcome:
-A scrapbook that allows adding pages and basic content (text/images).
-Save/load functionality with JSON format.
+The Digital Scrapbook Creator allows users to design a customizable scrapbook by adding pages, text elements, and images. Users can save their work, load existing scrapbooks, and export the final design as a PDF.
 
-Week 3: Enhancing User Interface and Adding Styling
-Goal: Improve the user interface with styling, background images, and better button interactions.
-Implemented Features:
-Added a background image for the main window to make the scrapbook feel more immersive.
-Styled buttons with custom colors, fonts, and hover effects for better user experience.
-Created a refresh canvas function to redraw the scrapbook page after adding elements.
-User Experience Improvements:
-Improved the layout with better padding and spacing between elements.
-Updated text elements to support custom fonts and colors.
-Outcome:
-A more polished and visually appealing GUI.
-Better user interaction with styled buttons and backgrounds.
+Features:
 
-Week 4: Finalizing Features and Export Functionality
-Goal: Add advanced features like exporting the scrapbook to a PDF and final bug fixes.
-Implemented Features:
-Added Export to PDF functionality to allow users to save their scrapbook as a PDF file.
-Refined the image handling to allow resizing and placement of images with drag-and-drop.
-Fixed bugs related to saving and loading multiple pages with different content types (text/images).
-Testing:
-Tested the scrapbook with different combinations of text and images.
-Ensured the PDF export maintains the layout and quality of images.
-Outcome:
-A non functional Digital Scrapbook Creator that supports adding text, images, saving/loading projects, and exporting to PDF.
-Conclusion
-Final Outcome: Developed a Digital Scrapbook Creator with the ability (yet to be addded) to add text and images, save and load scrapbook projects, and export them as PDFs. The user interface has been polished with custom backgrounds and styled buttons.
-Challenges: The main challenge was ensuring integration between the GUI and the scrapbook logic, particularly for handling images and saving/loading project data.
-Future Enhancements:
-Add more customization options like changing fonts, text sizes, and colors.
-Introduce additional scrapbooking features like adding stickers or decorative frames.
-Implement drag-and-drop functionality for images and text. 
-Having a working Digital Scrapbook.
+Add Pages: Create new blank pages in the scrapbook.
+
+Add Text: Place text at specific positions on a page.
+
+Add Images: Insert images at specified coordinates.
+
+Save Project: Save the scrapbook to a JSON file for future editing.
+
+Load Project: Load an existing scrapbook from a JSON file.
+
+Export to PDF: Generate a PDF version of the scrapbook with all pages and elements included.
+
+Launch the Application:
+Run the main script:
+
+python final_project.py
+
+User Guide
+
+Main Interface
+
+Buttons:
+
+Add Page: Adds a new blank page to your scrapbook.
+
+Add Text: Opens a dialog to input text and specify its position.
+
+Add Image: Opens a file dialog to select an image and specify its position.
+
+Save: Saves the current project to a JSON file.
+
+Load: Loads an existing scrapbook from a JSON file.
+
+Export to PDF: Exports all pages to a PDF file.
+
+Adding Elements
+
+Add Page:
+
+Click the "Add Page" button to create a new blank page. You must add a page before adding any text or images.
+
+Add Text:
+
+Click the "Add Text" button.
+
+Enter the desired text in the input dialog.
+
+Specify the X and Y coordinates for the text placement (values between 0 and 800 for X, and 0 and 600 for Y).
+
+Add Image:
+
+Click the "Add Image" button.
+
+Select an image file from your computer (“.png”, “.jpg”, “*.jpeg” supported).
+
+Specify the X and Y coordinates for the image placement (values between 0 and 800 for X, and 0 and 600 for Y).
+
+Saving and Loading Projects
+
+Save: Click "Save" and choose a filename to save the scrapbook in JSON format.
+
+Load: Click "Load" and select a previously saved JSON file to restore your scrapbook.
+
+Exporting to PDF
+
+Click "Export to PDF".
+
+Enter the desired filename for the PDF.
+
+The application will generate a PDF with all pages and elements included.
+
+Common Issues
+
+"No Pages Available" Error:
+
+Ensure you have added at least one page before attempting to add text or images.
+
+Crash When Adding Images:
+
+Verify that the selected file is a valid image and in the supported format (“.png”, “.jpg”, “*.jpeg”).
+
+Exported PDF Looks Blank:
+
+Ensure you have added elements to your pages before exporting.
+
+
